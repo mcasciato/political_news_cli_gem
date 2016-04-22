@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "political_news"
+
+PoliticalNews::CLI.new.call
