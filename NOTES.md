@@ -10,14 +10,14 @@
 
 ---------------------------------------------------------------------------------
 
-A command line interface for the latest tech news from Engadget and MacRumors.
+A command line interface for the latest political news from Washington Post and NY Times.
 
 user types latest-tech-news
 
-Show a list of most recent articles from each site:
+Show a list of most recent articles from each site (This was from 4/21/16):
 
-1. Engadget - "Android security report shows why you should stick to Google Play"
-2. MacRumors - "New 12-Inch MacBook Tidbits: 15% Faster, 41.4-Watt-Hour Battery, Refurb Price Drop, and More"
+1. What to Watch For in Primaries in Pennsylvania, Connecticut and 3 Other States - By ALEXANDER BURNS
+2. Cruz-Kasich alliance against Trump appears to falter early - Sean Sullivan,  David Weigel
 
 Which article would you like to read?
 

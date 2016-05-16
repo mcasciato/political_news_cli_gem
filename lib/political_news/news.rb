@@ -25,6 +25,7 @@ class PoliticalNews::News
   def self.scrape_nytimes
     doc = Nokogiri::HTML(open("http://www.nytimes.com/pages/politics/index.html"))
 
+
     article = self.new
     article.name = doc.search("h2").first.text.strip
     article.author = doc.search("h6.byline").first.text.strip
