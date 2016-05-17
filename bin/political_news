@@ -1,6 +1,62 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "political_news"
+#require "bundler/setup"
+require_relative "../lib/political_news"
+
+# cli = PoliticalNews::CLI.new
+# cli.call
 
 PoliticalNews::CLI.new.call
+
+# name = "bill"
+# if !(name == "joe")
+#   puts "hello stranger"
+# else
+#   puts "hello joe"
+# end
+
+# name = "bill"
+# if name != "joe"
+#   puts "hello joe"
+# else
+#   puts "hello stranger"
+# end
+
+# Class Feature
+
+# def self.do_something
+# end
+
+# def do_something_else
+# end
+
+# end
+
+# my_feature = Feature.new
+
+# Feature.do_something
+# end
+
+# Feature.new 
+
+# my_feature.do_something_else
+
+
+# class Dog
+#   def self.breeds_list
+#     puts "Collie, Retriever, Pug"
+#   end
+
+#   def bark
+#     puts "woof"
+#   end
+# end
+
+
+# fido = Dog.new 
+# fido.bark
+# Dog.breeds_list
+
+
+
+
