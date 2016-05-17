@@ -9,7 +9,7 @@ class PoliticalNews::CLI
     puts "Most Recent News in Politics:"
     @articles = PoliticalNews::News.today
     @articles.each.with_index(1) do |article, i|
-      puts "#{i}. #{article.name} - #{article.author}"
+      puts "#{i}. #{article.source} - #{article.name} - #{article.author}"
     end
   end
 
@@ -21,9 +21,15 @@ class PoliticalNews::CLI
       
       if input.to_i > 0
         the_article = @articles[input.to_i-1]
+        puts "----------"
+        puts "#{the_article.source}: "
+        puts " "
         puts "#{the_article.name} - #{the_article.author}"
-        puts "#{the_article.summary}"
+        puts " "
+        puts " #{the_article.summary}"
+        puts " "
         puts "#{the_article.url}"
+        puts "----------"
       elsif input == "list"
         list_articles
       elsif input == "exit"
