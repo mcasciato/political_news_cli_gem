@@ -2,14 +2,17 @@ class PoliticalNews::CLI
 
   def call
     list_articles
+    puts "---------------------------------"
     menu
   end
 
   def list_articles
-    puts "Most Recent News in Politics:"
+    puts "---------------------------------"
+    puts "| Most Recent News in Politics: |"
+    puts "---------------------------------"
     @articles = PoliticalNews::News.today
     @articles.each.with_index(1) do |article, i|
-      puts "#{i}. #{article.source} - #{article.name} - #{article.author}"
+      puts "#{i}. #{article.source} - '#{article.name} - #{article.author}"
     end
   end
 
@@ -18,10 +21,10 @@ class PoliticalNews::CLI
     while input != "exit"
     puts "Enter the number of the article for more info, type list to see the articles again, or type exit:"
       input = gets.chomp.downcase
-      
+
       if input.to_i > 0
         the_article = @articles[input.to_i-1]
-        puts "----------"
+        puts "---------------------------------"
         puts "#{the_article.source}: "
         puts " "
         puts "#{the_article.name} - #{the_article.author}"
@@ -29,7 +32,7 @@ class PoliticalNews::CLI
         puts " #{the_article.summary}"
         puts " "
         puts "#{the_article.url}"
-        puts "----------"
+        puts "---------------------------------"
       elsif input == "list"
         list_articles
       elsif input == "exit"

@@ -3,7 +3,8 @@ class PoliticalNews::News
   attr_accessor :name, :author, :summary, :url, :source
 
   def self.today
-  #Scrape New York Times, Washington Post, and TIME (change to Politico? other?)and return newest political articles
+  #class method
+  #Scrape New York Times, Washington Post, and TIME (change to Politico? other? --> Buzzfeed)and return newest political articles
     self.scrape_articles
   end
 
@@ -18,7 +19,7 @@ class PoliticalNews::News
     # Extract properties
     # instantiate article
 
-    # Do same for washington post and TIME (change to Politico? other?)
+    # Do same for washington post and TIME (change to Politico? other? --> Buzzfeed)
      articles 
   end
 
