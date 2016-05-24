@@ -6,7 +6,7 @@ class PoliticalNews::Article
     articles = []
 
     articles << PoliticalNews::Scraper.scrape_nytimes
-    articles << self.scrape_washpost
+    articles << PoliticalNews::Scraper.scrape_washpost
     articles << self.scrape_buzzfeed_politics
 
     # Go to New York Times, find article
@@ -30,17 +30,17 @@ class PoliticalNews::Article
   #   article
   # end
 
-  def self.scrape_washpost
-    doc = Nokogiri::HTML(open("https://www.washingtonpost.com/politics/?nid=menu_nav_politics"))
-
-    article = self.new
-    article.name = doc.search("h3").first.text.strip
-    article.author = doc.search("div.story-list-meta-social ul li").first.text.strip
-    article.summary = doc.search("div.story-description p").first.text.strip
-    article.url = doc.search("h3 a").first.attr("href").strip
-    article.source = doc.search("div #logo-in-nav a img").first["alt"]
-    article
-  end
+  # def self.scrape_washpost
+  #   doc = Nokogiri::HTML(open("https://www.washingtonpost.com/politics/?nid=menu_nav_politics"))
+  #
+  #   article = self.new
+  #   article.name = doc.search("h3").first.text.strip
+  #   article.author = doc.search("div.story-list-meta-social ul li").first.text.strip
+  #   article.summary = doc.search("div.story-description p").first.text.strip
+  #   article.url = doc.search("h3 a").first.attr("href").strip
+  #   article.source = doc.search("div #logo-in-nav a img").first["alt"]
+  #   article
+  # end
 
   def self.scrape_buzzfeed_politics
      doc = Nokogiri::HTML(open("https://www.buzzfeed.com/politics"))

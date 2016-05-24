@@ -12,5 +12,17 @@ class PoliticalNews::Scraper
     article
   end
 
+  def self.scrape_washpost
+    doc = Nokogiri::HTML(open("https://www.washingtonpost.com/politics/?nid=menu_nav_politics"))
+
+    article = PoliticalNews::Article.new
+    article.name = doc.search("h3").first.text.strip
+    article.author = doc.search("div.story-list-meta-social ul li").first.text.strip
+    article.summary = doc.search("div.story-description p").first.text.strip
+    article.url = doc.search("h3 a").first.attr("href").strip
+    article.source = doc.search("div #logo-in-nav a img").first["alt"]
+    article
+  end
+
 
 end
