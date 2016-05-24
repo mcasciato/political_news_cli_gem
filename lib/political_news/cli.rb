@@ -10,7 +10,7 @@ class PoliticalNews::CLI
     puts "---------------------------------"
     puts "| Most Recent News in Politics: |"
     puts "---------------------------------"
-    @articles = PoliticalNews::News.today
+    @articles = PoliticalNews::Article.today
     @articles.each.with_index(1) do |article, i|
       puts "#{i}. #{article.source} - '#{article.name} - #{article.author}"
     end

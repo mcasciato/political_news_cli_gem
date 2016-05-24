@@ -8,6 +8,8 @@ require_relative "../lib/political_news"
 
 PoliticalNews::CLI.new.call
 
+
+
 # name = "bill"
 # if !(name == "joe")
 #   puts "hello stranger"
@@ -37,7 +39,7 @@ PoliticalNews::CLI.new.call
 # Feature.do_something
 # end
 
-# Feature.new 
+# Feature.new
 
 # my_feature.do_something_else
 
@@ -53,10 +55,6 @@ PoliticalNews::CLI.new.call
 # end
 
 
-# fido = Dog.new 
+# fido = Dog.new
 # fido.bark
 # Dog.breeds_list
-
-
-
-
