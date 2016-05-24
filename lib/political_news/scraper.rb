@@ -24,5 +24,17 @@ class PoliticalNews::Scraper
     article
   end
 
+  def self.scrape_buzzfeed_politics
+    doc = Nokogiri::HTML(open("https://www.buzzfeed.com/politics"))
+
+    article = PoliticalNews::Article.new
+    article.name = doc.search("div.lede__body h2.lede__title").first.text.strip
+    article.author = doc.search("div.small-meta__item").first.text.strip
+    article.summary = doc.search("p.lede__kicker").first.text.strip
+    article.url = "https://www.buzzfeed.com/politics" + doc.search("div.lede__body h2.lede__title a").first.attr("href").strip
+    article.source = doc.search("div #logo a").first.text
+    article
+  end
+
 
 end
