@@ -9,11 +9,6 @@ class PoliticalNews::Article
     articles << PoliticalNews::Scraper.scrape_washpost
     articles << PoliticalNews::Scraper.scrape_buzzfeed_politics
 
-    # Go to New York Times, find article
-    # Extract properties
-    # instantiate article
-
-    # Do same for washington post and TIME (change to Politico? other? --> Buzzfeed)
-     articles
+    articles
   end
 end

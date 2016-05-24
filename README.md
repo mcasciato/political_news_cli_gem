@@ -1,8 +1,10 @@
-# PoliticalNews
+# Political News CLI Gem!
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/political_news`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to my political news gem!  
 
-TODO: Delete this and the text above, and describe your gem
+It's hard not to get wrapped up in politics given that we're in an election cycle. I wanted a way to get through all the clutter and verbal attacking that you'd find on TV, and just simply read what is going on.
+
+This gem will scrape some popular websites (New York Times, Washington Post, and Buzzfeed News) and return the most recent article about politics. You can then select an article for some more information.
 
 ## Installation
 
@@ -22,7 +24,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem, it's pretty easy to interact with it. Once you run the program, it will give you a list of the most recent articles (1, 2, etc.) with their source, article title, and article author.
+
+The CLI will prompt you to enter a number for more information, type 'list' to refresh the list of articles, or type 'exit' to exit the program. Pretty simple!
 
 ## Development
 
@@ -32,10 +36,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/political_news. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mcasciato/political_news_cli_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
