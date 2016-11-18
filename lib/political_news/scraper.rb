@@ -8,7 +8,7 @@ class PoliticalNews::Scraper
     article.author = doc.search("h6.byline").first.text.strip
     article.summary = doc.search("div.ledeStory p.summary").first.text.strip
     article.url = doc.search("h2 a").first.attr("href").strip
-    article.source = doc.search("div #branding a img").first["alt"]
+    article.source = "The New York Times"
     article
   end
 
